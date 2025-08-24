@@ -14,5 +14,8 @@
   "github": {
     "silent": true
   },
-  "outputDirectory": "temp-nextjs/.next/static"
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "devCommand": "next dev --port $PORT",
+  "installCommand": "npm install"
 }
