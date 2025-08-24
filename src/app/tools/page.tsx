@@ -259,6 +259,83 @@ export default function ToolsSection() {
           </div>
         </Panel>
 
+        {/* Research Publications */}
+        <Panel className="relative">
+          <div className="panel-header">
+            <h2 className="panel-title">RESEARCH PUBLICATIONS</h2>
+          </div>
+          <div className="p-6 space-y-6">
+            {/* Status */}
+            <div className="flex items-center justify-between">
+              <StatusIndicator status="online" label="TRANSMITTING" size="sm" />
+              <span className="text-console text-xs">WEEKLY UPDATES</span>
+            </div>
+
+            {/* Publications Preview */}
+            <ConsoleScreen title="LATEST RESEARCH">
+              <div className="space-y-2 text-xs">
+                <div className="text-electric-blue font-bold">
+                  RESEARCH BRIEFING #247
+                </div>
+                <div className="text-neon-green">
+                  Subject: Strategic Advances in Counter-Racism
+                </div>
+                <div className="text-text-primary">
+                  - New research findings published
+                </div>
+                <div className="text-text-primary">
+                  - Community action updates
+                </div>
+                <div className="text-text-primary">
+                  - Planetary Chess tournaments
+                </div>
+                <div className="text-alert-orange">
+                  [READ MORE...]
+                </div>
+              </div>
+            </ConsoleScreen>
+
+            {/* Features */}
+            <div className="space-y-3">
+              <h3 className="text-electric-blue font-sci-fi text-sm">RESEARCH FEATURES:</h3>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center space-x-2">
+                  <div className="w-1 h-1 bg-neon-green rounded-full" />
+                  <span>Weekly strategy updates</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1 h-1 bg-electric-blue rounded-full" />
+                  <span>Research breakthroughs</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1 h-1 bg-cyber-purple rounded-full" />
+                  <span>Community highlights</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1 h-1 bg-alert-orange rounded-full" />
+                  <span>Gaming tournament alerts</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm text-text-secondary">
+              Stay connected with the latest developments in counter-racism strategy, research findings, 
+              and community actions through our encrypted communication channels.
+            </p>
+
+            {/* Subscribe Button */}
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              onClick={handleNewsletterSignup}
+              className="w-full"
+            >
+              📚 ACCESS RESEARCH LIBRARY
+            </Button>
+          </div>
+        </Panel>
+
         {/* Resources & Documentation */}
         <Panel className="relative">
           <div className="panel-header">

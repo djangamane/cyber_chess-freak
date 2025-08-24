@@ -211,8 +211,7 @@ export default function GamesSection() {
             <Button 
               variant="danger" 
               size="lg" 
-              onClick={handleViewClassified}
-              className="w-full opacity-50"
+              className="w-full opacity-50 cursor-not-allowed"
               disabled
             >
               🔒 ACCESS DENIED - COMING SOON

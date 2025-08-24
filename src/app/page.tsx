@@ -133,15 +133,6 @@ export default function SpaceshipBridge() {
         {/* Action Buttons - Mission Controls */}
         <div className="space-y-3 md:space-y-4 w-full max-w-sm md:max-w-md">
           <Button 
-            variant="primary" 
-            size="lg"
-            onClick={handleInitiateMission}
-            className="w-full animate-pulse text-sm md:text-base"
-          >
-            🚀 INITIATE MISSION - ENTER WAR ROOM
-          </Button>
-          
-          <Button 
             variant="secondary" 
             size="md"
             onClick={handleNavigateToGames}
@@ -165,7 +156,7 @@ export default function SpaceshipBridge() {
         <div className="mt-3 md:mt-6 text-center text-xs md:text-sm text-text-muted px-2">
           <div className="flex items-center justify-center space-x-1 md:space-x-2 flex-wrap">
             <div className="w-1 h-1 bg-neon-green rounded-full animate-pulse" />
-            <span className="text-center">Research-backed by Game Theory in Action (IJGTT, 2024)</span>
+            <span className="text-center">Project supported by Published Research - Game Theory in Action (IJGTT, 2024) - The International Journal of Computational Science, Information Technology and Control Engineering (IJCSITCE) Vol.11, No.3, July 2024 AUTOMATING COUNTER-RACISM: A CONTROL THEORY APPROACH WITH SMOKY IN THE PLANETARY CHESS FRAMEWORK - International Journal of Chaos, Control, Modelling and Simulation (IJCCMS) Vol.13, No.1, March 2024 LEVERAGING TECHNOLOGY TO DISMANTLE SYSTEMIC RACISM: MODELING AND SIMULATION WITH PLANETARY CHESS - International Journal on Soft Computing (IJSC) Vol.15, No.3, August 2024 Evaluating Racial Bias in Large Language Models: The Necessity for "SMOKY" - International Journal of Computer Science & Information Technology (IJCSIT) Vol 16, No 4, August 2024 EXPLORING WHITE FRAGILITY IN LARGE LANGUAGE MODELS - Computer Science & Information Technology (CS & IT) LEVERAGING AN AFRICAN-CENTERED LANGUAGE MODEL (LLM) FOR DISMANTLING WHITE SUPREMACY: THE CASE OF "SMOKY"</span>
             <div className="w-1 h-1 bg-neon-green rounded-full animate-pulse" />
           </div>
         </div>
