@@ -1,0 +1,9 @@
+{
+  "name": "temp-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "cd .. && npm run build",
+    "start": "cd .. && npm start"
+  }
+}
