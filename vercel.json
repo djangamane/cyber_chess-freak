@@ -2,19 +2,17 @@
   "builds": [
     {
       "src": "temp-nextjs/package.json",
-      "use": "@vercel/next",
-      "config": {
-        "distDir": "temp-nextjs/.next"
-      }
+      "use": "@vercel/next"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "temp-nextjs/$1"
+      "dest": "/temp-nextjs/$1"
     }
   ],
   "github": {
     "silent": true
-  }
+  },
+  "outputDirectory": "temp-nextjs/.next/static"
 }
