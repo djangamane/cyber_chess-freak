@@ -260,7 +260,7 @@ export default function ToolsSection() {
         </Panel>
 
         {/* Resources & Documentation */}
-        <Panel className="relative lg:col-span-2 xl:col-span-1">
+        <Panel className="relative">
           <div className="panel-header">
             <h2 className="panel-title">STRATEGIC RESOURCES</h2>
           </div>
