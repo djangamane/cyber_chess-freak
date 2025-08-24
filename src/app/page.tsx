@@ -179,7 +179,7 @@ export default function SpaceshipBridge() {
       </div>
 
       <div className="absolute top-4 right-4 hidden lg:block text-console text-xs opacity-60 text-right">
-        <div>CAPT: J. BUSSAJA</div>
+        <div>CAPT: Dr. F.C Welsing and Dr. A.Wilson</div>
         <div>CREW: ACTIVE</div>
         <div>ALERT: {missionStatus.toUpperCase()}</div>
       </div>
