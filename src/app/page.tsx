@@ -96,41 +96,6 @@ export default function SpaceshipBridge() {
           </div>
         </HolographicDisplay>
 
-        {/* Mission Statement Panel */}
-        <div className="panel mb-4 md:mb-8 w-full max-w-4xl">
-          <div className="panel-header">
-            <h2 className="panel-title text-sm md:text-base">MISSION PARAMETERS</h2>
-          </div>
-          <div className="p-3 md:p-6 space-y-3 md:space-y-4">
-            <p className="text-sm md:text-lg text-text-primary leading-relaxed">
-              <span className="text-electric-blue font-bold">OBJECTIVE:</span> Deploy strategic gaming protocols to dismantle systemic racism through education, critical thinking, and collective action.
-            </p>
-            <p className="text-xs md:text-base text-text-secondary">
-              <span className="text-neon-green font-bold">METHOD:</span> Planetary Chess combines traditional strategy with real-world problem-solving, creating an immersive learning environment where every move counts toward social change.
-            </p>
-            <div className="border-t border-panel-border pt-3 md:pt-4 mt-3 md:mt-4">
-              <div className="flex flex-wrap gap-2 md:gap-4 justify-center text-xs md:text-sm">
-                <div className="flex items-center space-x-1 md:space-x-2">
-                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-electric-blue rounded-full" />
-                  <span>Strategic Gaming</span>
-                </div>
-                <div className="flex items-center space-x-1 md:space-x-2">
-                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-neon-green rounded-full" />
-                  <span>Educational Content</span>
-                </div>
-                <div className="flex items-center space-x-1 md:space-x-2">
-                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-alert-orange rounded-full" />
-                  <span>Social Impact</span>
-                </div>
-                <div className="flex items-center space-x-1 md:space-x-2">
-                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-cyber-purple rounded-full" />
-                  <span>NFT Integration</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Action Buttons - Mission Controls */}
         <div className="space-y-3 md:space-y-4 w-full max-w-sm md:max-w-md">
           <Button 
