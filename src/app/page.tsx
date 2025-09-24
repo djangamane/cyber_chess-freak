@@ -81,33 +81,6 @@ export default function SpaceshipBridge() {
           </div>
         </div>
 
-        {/* Main Title - Mission Briefing Style */}
-        <HolographicDisplay className="mb-4 md:mb-8 w-full">
-          <div className="text-center space-y-2 md:space-y-4">
-            <h1 className="heading-main animate-fade-in text-3xl md:text-6xl">
-              PLANETARY CHESS
-            </h1>
-            <div className="font-console text-electric-blue text-sm md:text-lg tracking-wider">
-              === COUNTER-RACISM STRATEGIC COMMAND CENTER ===
-            </div>
-            <div className="text-console text-xs md:text-sm opacity-80">
-              MISSION BRIEFING | CLASSIFICATION: URGENT
-            </div>
-          </div>
-        </HolographicDisplay>
-
-        {/* Action Buttons - Mission Controls */}
-        <div className="space-y-3 md:space-y-4 w-full max-w-sm md:max-w-md">
-          <Button 
-            variant="secondary" 
-            size="md"
-            onClick={handleNavigateToGames}
-            className="w-full text-sm md:text-base"
-          >
-            🎯 DIRECT TO PLANETARY CHESS
-          </Button>
-        </div>
-
         {/* Quote/Motto */}
         <div className="mt-4 md:mt-8 text-center px-2">
           <div className="text-console text-xs md:text-sm opacity-90 mb-2">
