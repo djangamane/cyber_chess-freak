@@ -31,7 +31,7 @@ export default function SpaceshipBridge() {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center justify-end pb-16 md:pb-24 overflow-hidden">
       {/* Background Video - Now as Holographic Earth Display */}
       <div className="absolute inset-0 w-full h-full">
         {/* Mobile Welcome Screen */}
