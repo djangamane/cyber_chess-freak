@@ -21,7 +21,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Dr. Francis Cress Welsing and Dr. Amos Wilson" }],
   viewport: "width=device-width, initial-scale=1",
   themeColor: "#000000",
-  robots: "index, follow"
+  robots: "index, follow",
+  icons: {
+    icon: "/snake.png",
+  },
 };
 
 export default function RootLayout({
