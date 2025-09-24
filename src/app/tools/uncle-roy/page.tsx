@@ -202,7 +202,6 @@ export default function UncleRoyChat() {
                 aria-label="Chat input for Uncle Roy"
               />
               <Button 
-                type="submit"
                 variant="primary" 
                 disabled={!inputMessage.trim() || isLoading}
                 className="px-6"
