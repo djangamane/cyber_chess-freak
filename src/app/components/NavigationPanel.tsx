@@ -223,7 +223,7 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
                           <span className="ml-auto text-xs text-alert">LOCKED</span>
                         )}
                       </Link>
-                    )
+                    ))
                   )}
                 </div>
               )}
