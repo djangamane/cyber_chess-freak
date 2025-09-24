@@ -61,31 +61,11 @@ export default function SpaceshipBridge() {
       {/* Main Bridge Console Interface */}
       <div className="z-10 relative flex flex-col items-center text-center px-3 md:px-6 py-6 md:py-12 w-full max-w-6xl">
         {/* System Status Header */}
-        <div className="mb-4 md:mb-8 w-full">
-          <div className="flex justify-center items-center space-x-4 md:space-x-8 mb-4 overflow-x-auto">
-            <StatusIndicator 
-              status={systemsOnline ? 'online' : 'warning'} 
-              label="LIFE SUPPORT" 
-              size="sm" 
-            />
-            <StatusIndicator 
-              status={systemsOnline ? 'online' : 'offline'} 
-              label="NAVIGATION" 
-              size="sm" 
-            />
-            <StatusIndicator 
-              status={missionStatus === 'critical' ? 'error' : 'online'} 
-              label="MISSION STATUS" 
-              size="sm" 
-            />
-          </div>
-        </div>
+        {/* Placeholder to maintain layout */}
+        <div className="h-[52px] md:h-[68px] w-full" />
 
         {/* Quote/Motto */}
         <div className="mt-4 md:mt-8 text-center px-2">
-          <div className="text-console text-xs md:text-sm opacity-90 mb-2">
-            [ STRATEGIC PROTOCOL ALPHA-7 ]
-          </div>
           <p className="text-sm md:text-xl font-bold text-electric-blue tracking-wide animate-glow">
             KNOW THYSELF + KNOW THY ENEMY = VICTORY OVER SYSTEMIC RACISM
           </p>
