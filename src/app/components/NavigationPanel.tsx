@@ -68,7 +68,6 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
       icon: <AboutIcon />,
       subItems: [
         { id: 'mission', label: 'Mission & Story', icon: <MissionIcon />, path: '/about/mission' },
-        { id: 'research', label: 'Research & Publications', icon: <ResearchIcon />, path: '/about/research' },
         { id: 'contact', label: 'Contact', icon: <ContactIcon /> }
       ]
     }
