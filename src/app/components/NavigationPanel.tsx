@@ -196,35 +196,6 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
                         {subItem.id === 'game-2' && (
                           <span className="ml-auto text-xs text-alert">LOCKED</span>
                         )}
-                      </a>
-                    ) : subItem.id === 'contact' ? (
-                      <button
-                        key={subItem.id}
-                        className="nav-item pl-2 md:pl-4 touch-target w-full text-left"
-                        onClick={() => setContactModalOpen(true)}
-                      >
-                        <span className="w-3 h-3 md:w-4 md:h-4 mr-2 md:mr-3 flex items-center justify-center text-xs">{subItem.icon}</span>
-                        <span className="font-body text-xs md:text-sm flex-1">{subItem.label}</span>
-                        {subItem.id === 'game-2' && (
-                          <span className="ml-auto text-xs text-alert">LOCKED</span>
-                        )}
-                      </a>
-                    ) : (
-                      <Link
-                        key={subItem.id}
-                        href={subItem.path || '#'}
-                        className={`nav-item pl-2 md:pl-4 touch-target ${
-                          subItem.path && isItemActive(subItem.path) ? 'active' : ''
-                        } ${subItem.id === 'game-2' ? 'opacity-60' : ''}`}
-                        onClick={onToggle}
-                      >
-                        <span className="w-3 h-3 md:w-4 md:h-4 mr-2 md:mr-3 flex items-center justify-center text-xs">
-                          {subItem.icon}
-                        </span>
-                        <span className="font-body text-xs md:text-sm flex-1">{subItem.label}</span>
-                        {subItem.id === 'game-2' && (
-                          <span className="ml-auto text-xs text-alert">LOCKED</span>
-                        )}
                       </Link>
                     )
                   ))}
