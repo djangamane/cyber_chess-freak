@@ -151,15 +151,22 @@ export default function UncleRoyChat() {
 
   return (
     <div className="min-h-screen p-6">
-      <Button 
-        variant="console" 
-        size="sm" 
-        onClick={handleBackToTools}
-        className="mb-4"
-      >
-        ← BACK TO COMMAND TOOLS
-      </Button>
-
+      <div className="flex items-center space-x-4 mb-4">
+        <Button
+          variant="console"
+          size="sm"
+          onClick={() => startTransition('/')}
+        >
+          ⌂ HOME
+        </Button>
+        <Button 
+          variant="console" 
+          size="sm" 
+          onClick={handleBackToTools}
+        >
+          ← BACK TO COMMAND TOOLS
+        </Button>
+      </div>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 h-[calc(100vh-100px)]">
         <Panel className="lg:col-span-3 flex flex-col">
           <div className="panel-header">

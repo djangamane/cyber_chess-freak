@@ -1,11 +1,23 @@
 "use client";
 
 import React from 'react';
-import { Panel, StatusIndicator } from '../../components/UIComponents';
+import { Panel, StatusIndicator, Button } from '../../components/UIComponents';
+import { useTransition } from '../../components/TransitionProvider';
 
 export default function MissionPage() {
+  const { startTransition } = useTransition();
+
   return (
     <div className="min-h-screen p-4 md:p-6 space-y-8">
+      {/* Home Button */}
+      <Button
+        variant="console"
+        size="sm"
+        onClick={() => startTransition('/')}
+        className="mb-4"
+      >
+        ⌂ HOME
+      </Button>
       {/* Section Header */}
       <div className="text-center mb-8 md:mb-12">
         <h1 className="heading-section">MISSION & OPERATIVE PROFILE</h1>

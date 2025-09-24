@@ -25,6 +25,15 @@ export default function ToolsSection() {
 
   return (
     <div className="min-h-screen p-6 space-y-8">
+      {/* Home Button */}
+      <Button
+        variant="console"
+        size="sm"
+        onClick={() => startTransition('/')}
+        className="mb-4"
+      >
+        ⌂ HOME
+      </Button>
       {/* Section Header */}
       <div className="text-center mb-12">
         <h1 className="heading-section">STRATEGIC COMMAND TOOLS</h1>

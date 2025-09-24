@@ -427,6 +427,16 @@ export default function FAQSection() {
     <ContactModal isOpen={isContactModalOpen} onClose={() => setContactModalOpen(false)} />
     <div className="min-h-screen p-4 md:p-6 space-y-8 relative">
       {/* Background Effects */}
+      <div className="relative z-10">
+        <Button
+          variant="console"
+          size="sm"
+          onClick={() => startTransition('/')}
+          className="mb-4"
+        >
+          ⌂ HOME
+        </Button>
+      </div>
       <div className="absolute inset-0 z-0">
         <div className="absolute top-10 right-10 w-32 h-32 bg-electric-blue/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-40 h-40 bg-cyber-purple/10 rounded-full blur-3xl" />

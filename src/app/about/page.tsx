@@ -23,6 +23,17 @@ export default function AboutSection() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
         
+        {/* Home Button */}
+        <div className="lg:col-span-2">
+          <Button
+            variant="console"
+            size="sm"
+            onClick={() => startTransition('/')}
+          >
+            ⌂ HOME
+          </Button>
+        </div>
+        
         {/* Mission & Story */}
         <div className="space-y-6">
           <HolographicDisplay>
