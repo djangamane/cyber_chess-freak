@@ -1,6 +1,7 @@
 "use client";
 
 import { useTransition } from "./components/TransitionProvider";
+import Image from "next/image";
 import VideoBackground from "./components/VideoBackground";
 import { Button, HolographicDisplay, StatusIndicator } from "./components/UIComponents";
 import { useState, useEffect } from "react";
@@ -34,8 +35,8 @@ export default function SpaceshipBridge() {
       {/* Background Video - Now as Holographic Earth Display */}
       <div className="absolute inset-0 w-full h-full">
         {/* Mobile Welcome Screen */}
-        <div className="absolute inset-0 w-full h-full md:hidden">
-          <img src="/pchessmobile.png" alt="Planetary Chess Mobile" className="w-full h-full object-cover opacity-80" />
+        <div className="absolute inset-0 w-full h-full md:hidden opacity-80">
+          <Image src="/pchessmobile.png" alt="Planetary Chess Mobile" layout="fill" objectFit="cover" />
           <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/20 to-cyber-purple/20" />
         </div>
 

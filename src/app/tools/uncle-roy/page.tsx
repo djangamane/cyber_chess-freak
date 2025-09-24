@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Button, Panel, StatusIndicator, UIComponentProps } from '../../components/UIComponents';
+import { Button, Panel, StatusIndicator } from '../../components/UIComponents';
 import { useTransition } from '../../components/TransitionProvider';
 
 interface ChatMessage {
