@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ContactModal from './ContactModal';
 
 interface NavigationItem {
   id: string;
@@ -20,6 +21,7 @@ interface NavigationPanelProps {
 
 export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelProps) {
   const pathname = usePathname();
+  const [isContactModalOpen, setContactModalOpen] = useState(false);
   
   // Helper function to check if a URL is external
   const isExternalUrl = (url: string) => {
@@ -55,8 +57,8 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
       label: 'TOOLS',
       icon: <ToolsIcon />,
       subItems: [
-        { id: 'keisha-ai', label: 'Keisha AI', icon: <ChatIcon />, path: 'https://talk2keisha.com' },
-        { id: 'newsletter', label: 'Newsletter', icon: <NewsletterIcon />, path: 'https://planetarychess.beehiiv.com/' },
+        { id: 'strategic-tools', label: 'Strategic Command Tools', icon: <ToolsIcon />, path: '/tools' },
+        { id: 'keisha-ai', label: 'Keisha News Network (KNN)', icon: <ChatIcon />, path: 'https://talk2keisha.com' },
         { id: 'research', label: 'Research', icon: <ResourcesIcon />, path: 'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6390773' }
       ]
     },
@@ -67,13 +69,15 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
       subItems: [
         { id: 'mission', label: 'Mission & Story', icon: <MissionIcon />, path: '/about/mission' },
         { id: 'research', label: 'Research & Publications', icon: <ResearchIcon />, path: '/about/research' },
-        { id: 'contact', label: 'Contact', icon: <ContactIcon />, path: '/about/contact' }
+        { id: 'contact', label: 'Contact', icon: <ContactIcon /> }
       ]
     }
   ];
 
   const toggleSection = (sectionId: string) => {
     setExpandedSections(prev => ({
+      // Collapse other sections when one is opened
+      ...Object.keys(prev).reduce((acc, key) => ({ ...acc, [key]: false }), {}),
       ...prev,
       [sectionId]: !prev[sectionId]
     }));
@@ -85,6 +89,8 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
 
   return (
     <>
+      <ContactModal isOpen={isContactModalOpen} onClose={() => setContactModalOpen(false)} />
+
       {/* Overlay for mobile */}
       {isOpen && (
         <div 
@@ -186,6 +192,18 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
                         <span className="w-3 h-3 md:w-4 md:h-4 mr-2 md:mr-3 flex items-center justify-center text-xs">
                           {subItem.icon}
                         </span>
+                        <span className="font-body text-xs md:text-sm flex-1">{subItem.label}</span>
+                        {subItem.id === 'game-2' && (
+                          <span className="ml-auto text-xs text-alert">LOCKED</span>
+                        )}
+                      </a>
+                    ) : subItem.id === 'contact' ? (
+                      <button
+                        key={subItem.id}
+                        className="nav-item pl-2 md:pl-4 touch-target w-full text-left"
+                        onClick={() => setContactModalOpen(true)}
+                      >
+                        <span className="w-3 h-3 md:w-4 md:h-4 mr-2 md:mr-3 flex items-center justify-center text-xs">{subItem.icon}</span>
                         <span className="font-body text-xs md:text-sm flex-1">{subItem.label}</span>
                         {subItem.id === 'game-2' && (
                           <span className="ml-auto text-xs text-alert">LOCKED</span>
