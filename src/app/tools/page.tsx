@@ -111,6 +111,82 @@ export default function ToolsSection() {
           </div>
         </Panel>
 
+        {/* Newsletter & Communication */}
+        <Panel className="relative">
+          <div className="panel-header">
+            <h2 className="panel-title">DISPATCH COMMUNICATIONS</h2>
+          </div>
+          <div className="p-6 space-y-6">
+            {/* Status */}
+            <div className="flex items-center justify-between">
+              <StatusIndicator status="online" label="TRANSMITTING" size="sm" />
+              <span className="text-console text-xs">WEEKLY UPDATES</span>
+            </div>
+
+            {/* Newsletter Preview */}
+            <ConsoleScreen title="LATEST DISPATCH">
+              <div className="space-y-2 text-xs">
+                <div className="text-electric-blue font-bold">
+                  WEEKLY BRIEFING #247
+                </div>
+                <div className="text-neon-green">
+                  Subject: Strategic Advances in Counter-Racism
+                </div>
+                <div className="text-text-primary">
+                  - New research findings published
+                </div>
+                <div className="text-text-primary">
+                  - Community action updates
+                </div>
+                <div className="text-text-primary">
+                  - Planetary Chess tournaments
+                </div>
+                <div className="text-alert-orange">
+                  [READ MORE...]
+                </div>
+              </div>
+            </ConsoleScreen>
+
+            {/* Features */}
+            <div className="space-y-3">
+              <h3 className="text-electric-blue font-sci-fi text-sm">COMMUNICATION FEATURES:</h3>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center space-x-2">
+                  <div className="w-1 h-1 bg-neon-green rounded-full" />
+                  <span>Weekly strategy updates</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1 h-1 bg-electric-blue rounded-full" />
+                  <span>Research breakthroughs</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1 h-1 bg-cyber-purple rounded-full" />
+                  <span>Community highlights</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1 h-1 bg-alert-orange rounded-full" />
+                  <span>Gaming tournament alerts</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm text-text-secondary">
+              Stay connected with the latest developments in counter-racism strategy, research findings, 
+              and community actions through our encrypted communication channels.
+            </p>
+
+            {/* Subscribe Button */}
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              onClick={handleNewsletterSignup}
+              className="w-full"
+            >
+              📡 JOIN COMMUNICATION NETWORK
+            </Button>
+          </div>
+        </Panel>
 
         {/* Films & Documentaries */}
         <Panel className="relative">
@@ -268,41 +344,47 @@ export default function ToolsSection() {
           <div className="p-6 space-y-6">
             {/* Status */}
             <div className="flex items-center justify-between">
-              <StatusIndicator status="online" label="KNN ACTIVE" size="sm" />
-              <span className="text-console text-xs">3 CORE TOOLS</span>
+              <StatusIndicator status="online" label="DATABASE ACTIVE" size="sm" />
+              <span className="text-console text-xs">156 RESOURCES</span>
             </div>
 
             {/* Resource Categories */}
             <div className="space-y-4">
-              <a href="https://the-maga-files.vercel.app/" target="_blank" rel="noopener noreferrer" className="block bg-dark-matter border border-electric-blue/30 rounded p-3 hover:bg-electric-blue/10 transition-colors">
-                <div className="text-electric-blue font-bold text-sm mb-2">🔍 MAGA FILES</div>
-                <div className="text-xs text-text-secondary">Exposes colonial nostalgia and racist code words in political rhetoric</div>
-              </a>
+              <div className="bg-dark-matter border border-electric-blue/30 rounded p-3">
+                <div className="text-electric-blue font-bold text-sm mb-2">📚 RESEARCH LIBRARY</div>
+                <div className="text-xs text-text-secondary">Academic papers, studies, and theoretical frameworks</div>
+              </div>
               
-              <a href="https://fns-news-decoded5.vercel.app/" target="_blank" rel="noopener noreferrer" className="block bg-dark-matter border border-neon-green/30 rounded p-3 hover:bg-neon-green/10 transition-colors">
-                <div className="text-neon-green font-bold text-sm mb-2">📰 FNS (FRAGILE NEWS SOURCE)</div>
-                <div className="text-xs text-text-secondary">Tears apart broadcasts that euphemize racism into palatable sound bites</div>
-              </a>
+              <div className="bg-dark-matter border border-neon-green/30 rounded p-3">
+                <div className="text-neon-green font-bold text-sm mb-2">🎬 DOCUMENTARY ARCHIVE</div>
+                <div className="text-xs text-text-secondary">Educational films and video content</div>
+              </div>
               
-              <a href="https://www.talk2keisha.com/bias-detection" target="_blank" rel="noopener noreferrer" className="block bg-dark-matter border border-cyber-purple/30 rounded p-3 hover:bg-cyber-purple/10 transition-colors">
-                <div className="text-cyber-purple font-bold text-sm mb-2">📡 FRAGILE NEWS DECODER</div>
-                <div className="text-xs text-text-secondary">Gives ordinary people the power to score propaganda themselves</div>
-              </a>
+              <div className="bg-dark-matter border border-cyber-purple/30 rounded p-3">
+                <div className="text-cyber-purple font-bold text-sm mb-2">📊 STRATEGY GUIDES</div>
+                <div className="text-xs text-text-secondary">Tactical manuals and implementation guides</div>
+              </div>
+              
+              <div className="bg-dark-matter border border-alert-orange/30 rounded p-3">
+                <div className="text-alert-orange font-bold text-sm mb-2">🛠️ TOOLS & UTILITIES</div>
+                <div className="text-xs text-text-secondary">Planning tools and assessment instruments</div>
+              </div>
             </div>
 
             {/* Description */}
             <p className="text-sm text-text-secondary">
-              Keisha News Network (KNN) is a counter-racist intelligence system that decodes propaganda, scores bias in real time, and exposes the omissions mainstream AI avoids. Rooted in the intellectual fire of Welsing and Wilson, it runs on the soWS newsletter data engine, scraping stories daily to feed these three tools.
+              Comprehensive collection of educational materials, strategic frameworks, and practical 
+              tools for effective counter-racism work.
             </p>
 
             {/* Access Button */}
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => window.open('https://talk2keisha.com/knn', '_blank')}
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              onClick={handleViewResources}
               className="w-full"
             >
-              🔧 ACCESS KNN TOOLS
+              🗃️ ACCESS RESOURCE DATABASE
             </Button>
           </div>
         </Panel>

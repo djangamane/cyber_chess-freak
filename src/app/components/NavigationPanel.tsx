@@ -55,8 +55,8 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
       label: 'TOOLS',
       icon: <ToolsIcon />,
       subItems: [
-        { id: 'strategic-tools', label: 'Strategic Command Tools', icon: <ToolsIcon />, path: '/tools' },
-        { id: 'keisha-ai', label: 'Keisha News Network (KNN)', icon: <ChatIcon />, path: 'https://talk2keisha.com' },
+        { id: 'keisha-ai', label: 'Keisha AI', icon: <ChatIcon />, path: 'https://talk2keisha.com' },
+        { id: 'newsletter', label: 'Newsletter', icon: <NewsletterIcon />, path: 'https://planetarychess.beehiiv.com/' },
         { id: 'research', label: 'Research', icon: <ResourcesIcon />, path: 'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6390773' }
       ]
     },
@@ -73,7 +73,7 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
   ];
 
   const toggleSection = (sectionId: string) => {
-    setExpandedSections((prev: Record<string, boolean>) => ({
+    setExpandedSections(prev => ({
       ...prev,
       [sectionId]: !prev[sectionId]
     }));

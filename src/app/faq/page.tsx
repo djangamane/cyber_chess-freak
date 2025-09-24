@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Accordion, Panel, Button } from '../components/UIComponents';
 import { useTransition } from '../components/TransitionProvider';
 
 export default function FAQSection() {
   const { startTransition } = useTransition();
-  const [showContactModal, setShowContactModal] = useState(false);
 
   const faqItems = [
     {
@@ -407,10 +406,10 @@ export default function FAQSection() {
             >
               🎯 START PLAYING
             </Button>
-            <Button
-              variant="secondary"
-              size="sm"
-              onClick={() => setShowContactModal(true)}
+            <Button 
+              variant="secondary" 
+              size="sm" 
+              onClick={() => startTransition('/about/contact')}
               className="flex-1"
             >
               📧 GET IN TOUCH
@@ -482,16 +481,55 @@ export default function FAQSection() {
           >
             💬 ASK UNCLE ROY
           </Button>
-          <Button
-            variant="secondary"
-            size="lg"
-            onClick={() => setShowContactModal(true)}
+          <Button 
+            variant="secondary" 
+            size="lg" 
+            onClick={() => startTransition('/about/contact')}
             className="w-full"
           >
             📡 CONTACT COMMAND
           </Button>
         </div>
 
+        {/* Additional Help */}
+        <Panel>
+          <div className="panel-header">
+            <h3 className="panel-title">ADDITIONAL SUPPORT CHANNELS</h3>
+          </div>
+          <div className="p-4 md:p-6 space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="space-y-2">
+                <h4 className="text-electric-blue font-sci-fi">TECHNICAL SUPPORT</h4>
+                <p className="text-text-secondary">
+                  Experiencing technical issues? Our support team is here to help you get 
+                  back to your strategic missions quickly.
+                </p>
+                <Button 
+                  variant="console" 
+                  size="sm" 
+                  onClick={() => startTransition('/about/contact')}
+                >
+                  🛠️ TECHNICAL ASSISTANCE
+                </Button>
+              </div>
+              
+              <div className="space-y-2">
+                <h4 className="text-neon-green font-sci-fi">COMMUNITY FORUMS</h4>
+                <p className="text-text-secondary">
+                  Connect with other strategic players, share insights, and discuss 
+                  counter-racism strategies in our community space.
+                </p>
+                <Button 
+                  variant="console" 
+                  size="sm" 
+                  onClick={() => startTransition('/tools/resources')}
+                >
+                  💬 JOIN COMMUNITY
+                </Button>
+              </div>
+            </div>
+          </div>
+        </Panel>
         
         {/* Research Verification Call to Action */}
         <Panel>
@@ -516,26 +554,6 @@ export default function FAQSection() {
             </div>
           </div>
         </Panel>
-        {showContactModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-            <div className="bg-dark-matter p-6 rounded-lg max-w-md w-full">
-              <h3 className="text-electric-blue font-bold mb-4 text-lg">Contact Information</h3>
-              <p className="text-sm mb-4 text-text-secondary">Get in touch with the Planetary Chess team:</p>
-              <div className="space-y-2 mb-6">
-                <p className="font-mono">Janga Bussaja</p>
-                <p className="font-mono text-electric-blue">janga@planetarychess.com</p>
-              </div>
-              <Button
-                variant="primary"
-                size="sm"
-                onClick={() => setShowContactModal(false)}
-                className="w-full"
-              >
-                Close
-              </Button>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
