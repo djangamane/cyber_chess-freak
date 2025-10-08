@@ -44,7 +44,6 @@ export default function SpaceshipLayout({ children }: SpaceshipLayoutProps) {
         {/* Main Content Area */}
         <main className={`
           flex-1 relative transition-all duration-300 ease-in-out
-          md:ml-0 ${isNavOpen ? 'md:ml-80' : ''}
           min-h-screen
         `}>
           {/* Background Effects */}

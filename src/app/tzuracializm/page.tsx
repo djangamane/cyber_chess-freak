@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Button, Panel, HolographicDisplay, ConsoleScreen } from '../components/UIComponents';
+import { Button, Panel, HolographicDisplay } from '../components/UIComponents';
 import { useTransition } from '../components/TransitionProvider';
 import ContactModal from '../components/ContactModal';
 
@@ -124,21 +124,7 @@ export default function TzuracializmPage() {
         </div>
       </div>
 
-      {/* Transcript */}
-      <div className="max-w-7xl mx-auto">
-        <ConsoleScreen title="Planetary Chess — Transcript">
-          <div className="space-y-3">
-            <p>how we [ __ ] up systemic racism</p>
-            <p>Dr welsing first coined the term planetary chess but the effort is also known as counter-racism</p>
-            <p>introduction to planetary chess counter-racist strategy was written two years ago it combines The Genius of counter-racist experts with Sun Tzu to present a structure for future book volumes and the formula to end systemic racism Sun Tzu also prescribed another crucial remedy to eliminate systemic racism without a hint of Violence by perfecting the formula thus representing the Supreme art of warfare next one of one rare nfts were released to fund the project this led to the creation of a new art form Zoo racialism — art music literature or film that gives artistic life and flavor to the formula you're currently viewing Zoo racialism this is where planetary chess sits currently on the road map awaiting patrons or philanthropists ready to really [ __ ] systemic racism up</p>
-            <p>when that happened the planetary chess game will then be created in the metaverse players will compete against A.I Stewie for upgrades and crypto the game will help influence racial Jiu Jitsu — the concept that systemic racism sets traps like everyday police encounters as ways to eliminate us learn how to avoid the traps — that's racial Jiu Jitsu then you're ready to utilize technology for the finishing move the knowledge dispersed throughout the process are the roots and foundation of the system and these Technologies strengthen and fortify the community</p>
-            <p>The DAO will bridge the community and reward tzuracializm. The language model created will infuse the wisdom of the experts with today and formulate the data for expedient intel and reproduction. After seven years of running and tuning the model we ask the question — does systemic racism still exist?</p>
-            <p>If so we repeat the process using AI to create the next volume Planetary Chess volume one. New games can be created, new tzuracializm will be rewarded and after seven years of running and tuning the model we ask the question — does systemic racism still exist? If so we repeat the process using AI to create the next volume Planetary Chess volume 2. We continue to arm ourselves with knowledge of self and enemy until it's totally [ __ ] up.</p>
-            <p>[Music]</p>
-            <p>that's for [ __ ] with me you no business born insecure [ __ ] why aren't you thinking of how to end systemic racism why don't you have a methodology for dismantlement is this not the biggest single threat against us join planetary chess or create your own planner you need to shut the [ __ ] up when grown folks is talking — shots fired</p>
-          </div>
-        </ConsoleScreen>
-      </div>
+      {/* Transcript intentionally removed for preview clarity */}
     </div>
   );
 }
