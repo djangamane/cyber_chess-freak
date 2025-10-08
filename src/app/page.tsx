@@ -65,7 +65,7 @@ export default function SpaceshipBridge() {
         <div className="h-[52px] md:h-[68px] w-full" />
 
         {/* Quote/Motto */}
-        <div className="mt-4 md:mt-8 text-center px-2">
+        <div className="mt-4 md:mt-[15vh] text-center px-2">
           <p className="text-sm md:text-xl font-bold text-electric-blue tracking-wide animate-glow">
             KNOW THYSELF + KNOW THY ENEMY = VICTORY OVER SYSTEMIC RACISM
           </p>
