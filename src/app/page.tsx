@@ -59,13 +59,13 @@ export default function SpaceshipBridge() {
       </div>
 
       {/* Main Bridge Console Interface */}
-      <div className="z-10 relative flex flex-col items-center text-center px-3 md:px-6 py-6 md:py-12 w-full max-w-6xl">
+      <div className="z-10 relative flex flex-col items-center text-center px-3 md:px-6 py-6 md:py-12 w-full max-w-6xl md:translate-y-[15vh] transition-transform duration-300">
         {/* System Status Header */}
         {/* Placeholder to maintain layout */}
         <div className="h-[52px] md:h-[68px] w-full" />
 
         {/* Quote/Motto */}
-        <div className="mt-4 md:mt-[15vh] text-center px-2">
+        <div className="mt-4 md:mt-6 text-center px-2">
           <p className="text-sm md:text-xl font-bold text-electric-blue tracking-wide animate-glow">
             KNOW THYSELF + KNOW THY ENEMY = VICTORY OVER SYSTEMIC RACISM
           </p>
