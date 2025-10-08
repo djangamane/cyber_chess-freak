@@ -59,6 +59,7 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
       subItems: [
         { id: 'strategic-tools', label: 'Strategic Command Tools', icon: <ToolsIcon />, path: '/tools' },
         { id: 'keisha-ai', label: 'Keisha News Network (KNN)', icon: <ChatIcon />, path: 'https://talk2keisha.com' },
+        { id: 'crypto-101', label: 'Crypto 101', icon: <ResourcesIcon />, path: 'https://aicryptorisk.com' },
         { id: 'research', label: 'Research', icon: <ResourcesIcon />, path: 'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6390773' }
       ]
     },
