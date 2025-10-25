@@ -41,8 +41,7 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
       label: 'GAMES',
       icon: <GameIcon />,
       subItems: [
-        { id: 'planetary-chess', label: 'Planetary Chess', icon: <ChessIcon />, path: 'https://game.planetarychess.com' },
-        { id: 'game-2', label: 'Sector 2 - Classified', icon: <LockedIcon />, path: '/games/classified' }
+        { id: 'planetary-chess', label: 'Planetary Chess', icon: <ChessIcon />, path: 'https://game.planetarychess.com' }
       ]
     },
     // Moving FAQ to second position for better visibility
@@ -187,7 +186,7 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
                       <a
                         key={subItem.id}
                         href={subItem.path}
-                        className={`nav-item pl-2 md:pl-4 touch-target ${subItem.id === 'game-2' ? 'opacity-60' : ''}`}
+                        className="nav-item pl-2 md:pl-4 touch-target"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -195,9 +194,6 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
                           {subItem.icon}
                         </span>
                         <span className="font-body text-xs md:text-sm flex-1">{subItem.label}</span>
-                        {subItem.id === 'game-2' && (
-                          <span className="ml-auto text-xs text-alert">LOCKED</span>
-                        )}
                       </a>
                     ) : subItem.id === 'contact' && !subItem.path ? (
                       <button
@@ -214,16 +210,13 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
                         href={subItem.path || '#'}
                         className={`nav-item pl-2 md:pl-4 touch-target ${
                           subItem.path && isItemActive(subItem.path) ? 'active' : ''
-                        } ${subItem.id === 'game-2' ? 'opacity-60' : ''}`}
+                        }`}
                         onClick={onToggle}
                       >
                         <span className="w-3 h-3 md:w-4 md:h-4 mr-2 md:mr-3 flex items-center justify-center text-xs">
                           {subItem.icon}
                         </span>
                         <span className="font-body text-xs md:text-sm flex-1">{subItem.label}</span>
-                        {subItem.id === 'game-2' && (
-                          <span className="ml-auto text-xs text-alert">LOCKED</span>
-                        )}
                       </Link>
                     ))
                   )}
@@ -268,14 +261,6 @@ function ChessIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
       <path d="M19,22H5V20H19V22M16,18H8L10.18,8H13.82L16,18M10,4A1,1 0 0,1 11,5A1,1 0 0,1 10,6A1,1 0 0,1 9,5A1,1 0 0,1 10,4M14,4A1,1 0 0,1 15,5A1,1 0 0,1 14,6A1,1 0 0,1 13,5A1,1 0 0,1 14,4M12,1A1,1 0 0,1 13,2A1,1 0 0,1 12,3A1,1 0 0,1 11,2A1,1 0 0,1 12,1Z"/>
-    </svg>
-  );
-}
-
-function LockedIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-      <path d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
     </svg>
   );
 }
