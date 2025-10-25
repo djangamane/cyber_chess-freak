@@ -41,7 +41,7 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
       label: 'GAMES',
       icon: <GameIcon />,
       subItems: [
-        { id: 'planetary-chess', label: 'Planetary Chess', icon: <ChessIcon />, path: '/games/planetary-chess' },
+        { id: 'planetary-chess', label: 'Planetary Chess', icon: <ChessIcon />, path: 'https://game.planetarychess.com' },
         { id: 'game-2', label: 'Sector 2 - Classified', icon: <LockedIcon />, path: '/games/classified' }
       ]
     },
@@ -60,7 +60,8 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
         { id: 'strategic-tools', label: 'Strategic Command Tools', icon: <ToolsIcon />, path: '/tools' },
         { id: 'keisha-ai', label: 'Keisha News Network (KNN)', icon: <ChatIcon />, path: 'https://talk2keisha.com' },
         { id: 'crypto-101', label: 'Crypto 101', icon: <ResourcesIcon />, path: 'https://aicryptorisk.com' },
-        { id: 'research', label: 'Research', icon: <ResourcesIcon />, path: 'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6390773' }
+        { id: 'research', label: 'Research', icon: <ResourcesIcon />, path: 'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6390773' },
+        { id: 'know-thyself', label: 'Know Thyself', icon: <ResearchIcon />, path: 'https://bible.houseofism.com' }
       ]
     },
     {
@@ -70,7 +71,7 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
       subItems: [
         { id: 'mission', label: 'Mission & Story', icon: <MissionIcon />, path: '/about/mission' },
         { id: 'invest', label: 'Invest', icon: <MissionIcon />, path: '/tzuracializm' },
-        { id: 'contact', label: 'Contact', icon: <ContactIcon /> }
+        { id: 'contact', label: 'Contact', icon: <ContactIcon />, path: 'https://www.janga.planetarychess.com' }
       ]
     }
   ];
@@ -198,7 +199,7 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
                           <span className="ml-auto text-xs text-alert">LOCKED</span>
                         )}
                       </a>
-                    ) : subItem.id === 'contact' ? (
+                    ) : subItem.id === 'contact' && !subItem.path ? (
                       <button
                         key={subItem.id}
                         className="nav-item pl-2 md:pl-4 touch-target w-full text-left"
