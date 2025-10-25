@@ -70,7 +70,7 @@ export default function NavigationPanel({ isOpen, onToggle }: NavigationPanelPro
       subItems: [
         { id: 'mission', label: 'Mission & Story', icon: <MissionIcon />, path: '/about/mission' },
         { id: 'invest', label: 'Invest', icon: <MissionIcon />, path: '/tzuracializm' },
-        { id: 'contact', label: 'Contact', icon: <ContactIcon />, path: 'https://www.janga.planetarychess.com' }
+        { id: 'contact', label: 'Contact', icon: <ContactIcon />, path: 'https://janga.planetarychess.com' }
       ]
     }
   ];
