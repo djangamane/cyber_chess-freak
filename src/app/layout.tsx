@@ -23,9 +23,12 @@ export const metadata: Metadata = {
   themeColor: "#000000",
   robots: "index, follow",
   icons: {
-    icon: "/favicon_logo.png",
-    shortcut: "/favicon_logo.png",
-    apple: "/favicon_logo.png",
+    icon: [
+      { url: "/snake.png", rel: "icon", sizes: "32x32", type: "image/png" },
+      { url: "/snake.png", rel: "icon", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/snake.png",
+    apple: "/snake.png",
   },
 };
 
