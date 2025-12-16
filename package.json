@@ -9,10 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/core": "^8.3.10",
+    "@mantine/hooks": "^8.3.10",
+    "@reduxjs/toolkit": "^2.11.2",
+    "@supabase/supabase-js": "^2.87.3",
+    "antd": "^6.1.1",
+    "chess.js": "^1.4.0",
+    "lodash": "^4.17.21",
     "next": "^15.3.0",
+    "openai": "^4.52.7",
     "react": "^19.1.0",
+    "react-chessboard": "^5.8.6",
     "react-dom": "^19.1.0",
-    "openai": "^4.52.7"
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.10.1",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
